@@ -23,32 +23,32 @@ total_files = 0
 # 遍历每个子文件夹
 for subdir in subdirs:
     folder_name = subdir.name
-    
+
     # 获取该文件夹下的所有PDF文件
     pdf_files = list(subdir.glob("*.pdf"))
-    
+
     if pdf_files:  # 只为有PDF文件的文件夹创建工作表
         # 创建工作表，使用文件夹名作为sheet名（Excel sheet名有长度限制）
         sheet_name = folder_name[:31]  # Excel工作表名最多31个字符
         ws = wb.create_sheet(title=sheet_name)
-        
+
         # 设置表头
-        ws['A1'] = "序号"
-        ws['B1'] = "文件名"
-        
+        ws["A1"] = "序号"
+        ws["B1"] = "文件名"
+
         # 按小组序号排序
         def extract_group_number(file_path):
             # 从文件名中提取"第X小组"的数字
-            match = re.search(r'第(\d+)小组', file_path.name)
+            match = re.search(r"第(\d+)小组", file_path.name)
             return int(match.group(1)) if match else 999
-        
+
         pdf_files.sort(key=extract_group_number)
-        
+
         # 写入数据
         for idx, pdf_file in enumerate(pdf_files, start=1):
-            ws[f'A{idx+1}'] = idx
-            ws[f'B{idx+1}'] = pdf_file.name
-        
+            ws[f"A{idx+1}"] = idx
+            ws[f"B{idx+1}"] = pdf_file.name
+
         total_folders += 1
         total_files += len(pdf_files)
         print(f"文件夹 [{folder_name}] 找到 {len(pdf_files)} 个PDF文件")

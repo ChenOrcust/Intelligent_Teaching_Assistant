@@ -75,3 +75,4 @@ desktop.ini
 # 配置文件中的敏感信息
 config.ini
 settings.json
+configs.yaml

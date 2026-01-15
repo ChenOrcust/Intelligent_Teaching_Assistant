@@ -1,0 +1,14 @@
+# 大模型API配置示例
+# 使用说明：
+# 1. 复制此文件并重命名为 configs.yaml
+# 2. 填入你的API key和base_url
+# 3. configs.yaml 不会被上传到GitHub
+
+openai:
+  api_key: "your-api-key-here"
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  
+# 模型配置
+models:
+  vision: "qwen-vl-max"  # 视觉模型（批改作业用）
+  text: "qwen-max"       # 文本模型（批改论文用）
