@@ -1,0 +1,77 @@
+# 学生信息和作业文件
+*.pdf
+*.PDF
+*.xlsx
+*.xls
+*.XLSX
+*.XLS
+*.docx
+*.doc
+*.DOCX
+*.DOC
+
+# 学生作业文件夹
+课程论文/
+小组作业/
+课程资料/
+
+# 成绩相关文件
+*成绩*.xlsx
+*成绩*.xls
+*选课学生名单*.xls
+*选课学生名单*.xlsx
+批改用_*.xlsx
+
+# 临时文件
+*_临时.*
+temp/
+tmp/
+
+# Python相关
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 虚拟环境
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE相关
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 日志文件
+*.log
+
+# 配置文件中的敏感信息
+config.ini
+settings.json
